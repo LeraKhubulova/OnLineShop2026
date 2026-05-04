@@ -1,6 +1,6 @@
 ﻿@model OnLineShop2026.Models.User
 @{
-    ViewData["Title"] = "Детали пользователя";
+    ViewData["Title"] = "пользователЬ";
 }
 
 <h1>Информация о пользователе</h1>
@@ -11,6 +11,6 @@
         <h3>@Model.Name @Model.SurName</h3>
         <p><strong>Email:</strong> @Model.Email</p>
         <p><strong>ID:</strong> @Model.Id</p>
-        <a asp-controller="User" asp-action="Index" class="btn btn-secondary">Назад</a>
+        <a href="/User/Index" class="btn btn-secondary">Назад</a>
     </div>
 </div>
