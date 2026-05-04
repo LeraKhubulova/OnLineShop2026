@@ -1,0 +1,16 @@
+﻿@model OnLineShop2026.Models.User
+@{
+    ViewData["Title"] = "Детали пользователя";
+}
+
+<h1>Информация о пользователе</h1>
+
+<div class="card" style="width: 400px;">
+    <div class="card-body">
+        <img src="@Model.Avatar" width="100" height="100" style="border-radius: 50%;" />
+        <h3>@Model.Name @Model.SurName</h3>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>ID:</strong> @Model.Id</p>
+        <a asp-controller="User" asp-action="Index" class="btn btn-secondary">Назад</a>
+    </div>
+</div>

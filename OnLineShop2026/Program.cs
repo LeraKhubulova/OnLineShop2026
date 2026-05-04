@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IProductRepository, ProductRepositoryInMemory>();
+builder.Services.AddScoped<IUserRepository, UserRepositoryInMemory>();
 
 var app = builder.Build();
 
@@ -22,5 +23,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Catalog}/{id?}");
+
 
 app.Run();
