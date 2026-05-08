@@ -22,5 +22,18 @@ namespace OnLineShop2026.Data
         {
             return products.FirstOrDefault(product => product.Id == id);
         }
+
+        public void Add(Product product)
+        {
+            products.Add(product);
+        }
+
+        public void Edit(Product product)
+        {
+            Product editProduct = TryGetById(product.Id);
+            editProduct.Name = product.Name;
+            editProduct.Description = product.Description;
+            editProduct.PathImage = product.PathImage;
+        }
     }
 }

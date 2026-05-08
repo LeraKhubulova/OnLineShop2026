@@ -6,5 +6,7 @@ namespace OnLineShop2026.Data
     {
         List<Product> GetAll();
         Product? TryGetById(Guid id);
+        void Add(Product product);
+        void Edit(Product product);
     }
 }
